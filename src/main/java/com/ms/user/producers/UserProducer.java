@@ -15,7 +15,7 @@ public class UserProducer {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    @Value(value = "${spring.rabbitmq.queue}")
+    @Value(value = "${broker.queue.email.name}")
     private String routingKey;
 
     public void publishMessageEmail(UserModel userModel){
